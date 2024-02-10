@@ -101,3 +101,27 @@ button:hover{
   cursor: pointer;
   transition: .1s;
 }
+.fade-in {
+  animation: fadeIn .5s linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.fade-out {
+  animation: fadeIn .5s linear;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}

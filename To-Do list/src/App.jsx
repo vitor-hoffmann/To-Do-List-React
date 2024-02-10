@@ -9,22 +9,30 @@ function App() {
   const addTask = () => {
     if (newTask.trim() !== '') {
       setTasks([...tasks, newTask]);
-      setCheckedTasks([...checkedTasks, false]); // Inicializa o estado de cada checkbox como falso
+      setCheckedTasks([...checkedTasks, false]);
       setNewTask('');
+      setTimeout(() => {
+        const elements = document.querySelectorAll('.list');
+        const lastElement = elements[elements.length - 1];
+        if (lastElement) {
+          lastElement.classList.add('fade-in');
+          setTimeout(() => {
+            lastElement.classList.remove('fade-in');
+          }, 1000);
+        }
+      }, 0);
     }
   };
 
   const removeTask = (index) => {
     const updatedTasks = [...tasks];
     const updatedCheckedTasks = [...checkedTasks];
-
     updatedTasks.splice(index, 1);
     updatedCheckedTasks.splice(index, 1);
-
     setTasks(updatedTasks);
     setCheckedTasks(updatedCheckedTasks);
   };
-
+  
   const handleCheckboxChange = (index) => {
     const updatedCheckedTasks = [...checkedTasks];
     updatedCheckedTasks[index] = !updatedCheckedTasks[index];
