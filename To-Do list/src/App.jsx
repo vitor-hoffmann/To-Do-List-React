@@ -52,7 +52,7 @@ function App() {
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
           />
-          <button onClick={addTask}>Add</button>
+          <button id='buttonadd' onClick={addTask}>Add</button>
         </div>
       </div>
 

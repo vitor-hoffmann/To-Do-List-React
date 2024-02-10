@@ -34,10 +34,11 @@
 }
 #in{
   transition: .1s;
-  border-radius: 7px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   font-size: 100%;
   font-family: cursive;
-  padding-left: 5px;
+  padding-left: 7px;
   outline: none;
   
 }
@@ -88,6 +89,14 @@
 #buttons2{
   display: flex;
   justify-content: center;
+}
+#buttonadd{
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-right: 10px;
+  padding-left: 7px;
 }
 button{
   font-family: cursive;
